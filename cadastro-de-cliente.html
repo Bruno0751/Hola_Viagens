@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--50 caracteres-->
+    <title>HolaViagens</title>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Bruno Gressler da Silveira">
+    <!--caracters 150-->
+    <meta name="description" content="Site de Viagens">
+    <!--5 keywords-->
+    <meta name="keywords" content="Viagens">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,nofolow">
+
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <time datetime="2020-08-11"></time>
+
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="Voltar ao Inicio" title="Voltar ao Inicio"></a>
+        <ul class="lado">
+            <li><a href="cadastro-de-cliente.html" id="link-cadastro">Cadastrar</a></li>
+            <li><a href="login-de-cliente.php" id="link-login">Login</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 style="display: none;">HolaViagens</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clientes-cadastrados.php">Buscar Clientes</a></li>
+                <li><a href="cadastro-de-venda.html">Cadastro de Venda</a></li>
+                <li><a href="vendas-cadastradas.php">Buscar Vendas</a></li>
+            </ul>
+        </nav>
+
+        <fieldset>
+            <legend>Cadastro</legend>
+            <h3>*Campos Obrigatórios</h3>
+            <form method="post" action="control/control-cadastro-de-cliente.php" enctype="multipart/form-data">
+
+                <input type="text" placeholder="* Nome Completo" class="cadastrar-input-margem" name="textNome">
+
+                <input type="email" placeholder="* Email" class="cadastrar-input-margem" name="emailEmail">
+
+                <input type="text" placeholder="* Login" class="cadastrar-input-margem" name="textLogin">
+
+                <input type="password" placeholder="* Senha" class="cadastrar-input-margem" name="passwordSenha">
+
+                <label>Sua Foto:</label>
+                <input type="file" name="imagem">
+
+                <label>Data de Nascime</label>
+                <input type="date" name="dateDataNascimento" class="input-date" required>
+
+                <div class="bt-cadastrar-bt-limpar">
+
+                    <input type="submit" value="Cadastrar" class="cadastrar-entrar-bt-margem-tb">
+                    <input type="reset" value="Limpar Campos" class="limpar-deslogar-bt-margem-tb">
+
+                </div>
+
+            </form>
+
+        </fieldset>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
