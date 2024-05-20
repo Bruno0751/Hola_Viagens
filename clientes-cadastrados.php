@@ -53,7 +53,7 @@ $array = $daoCliente->buscarCliente();
     ?>
 
     <header>
-        <a href="index.html"><img src="images/logo.png" alt="Voltar ao Inicio" title="Voltar ao Inicio"></a>
+        <!-- <a href="index.html"><img src="images/logo.png" alt="Voltar ao Inicio" title="Voltar ao Inicio"></a> -->
 
         <ul class="lado">
 

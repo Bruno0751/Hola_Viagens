@@ -48,7 +48,7 @@ include_once 'utl/helper.php';
 
         <?php
         if (isset($_SESSION['privateUser'])) {
-        ?>
+            ?>
 
             <nav>
                 <ul>
@@ -59,7 +59,7 @@ include_once 'utl/helper.php';
                 </ul>
             </nav>
 
-        <?php
+            <?php
         }
 
         ?>
@@ -69,7 +69,7 @@ include_once 'utl/helper.php';
 
                 <?php
                 if (!isset($_SESSION['privateUser'])) {
-                ?>
+                    ?>
 
                     <legend>Login</legend>
                     <form method="post" action="control/control-verificacao-de-cliente.php">
@@ -83,7 +83,7 @@ include_once 'utl/helper.php';
 
                     </form>
 
-                <?php
+                    <?php
                 } else {
                     include "model/cliente.php";
                     $user = unserialize($_SESSION['privateUser']);

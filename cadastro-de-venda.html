@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <!--50 caracteres-->
-        <title>HolaViagens</title>
 
-        <meta charset="UTF-8">
-		<meta name="author" content="Bruno Gressler da Silveira">
-		<!--caracters 150-->
-		<meta name="description" content="Site de Viagens">
-        <!--5 keywords-->
-        <meta name="keywords" content="Viagens">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="index,nofolow">
-        
-        <link rel="stylesheet" type="text/css" href="style/styles.css">
-        <link rel="shortcut icon" href="images/logo.png">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<head>
+    <!--50 caracteres-->
+    <title>HolaViagens</title>
 
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <time datetime="2020-08-11"></time>
+    <meta charset="UTF-8">
+    <meta name="author" content="Bruno Gressler da Silveira">
+    <!--caracters 150-->
+    <meta name="description" content="Site de Viagens">
+    <!--5 keywords-->
+    <meta name="keywords" content="Viagens">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,nofolow">
 
-        <header>
-            <a href="index.html"><img src="images/logo.png" alt="Voltar ao Inicio" title="Voltar ao Inicio"></a>
-            <ul class="lado">
-                <li><a href="cadastro-de-cliente.html" id="link-cadastro">Cadastrar</a></li>
-                <li><a href="login-de-cliente.php" id="link-login">Login</a></li>
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <time datetime="2020-08-11"></time>
+
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="Voltar ao Inicio" title="Voltar ao Inicio"></a>
+        <ul class="lado">
+            <li><a href="cadastro-de-cliente.html" id="link-cadastro">Cadastrar</a></li>
+            <li><a href="login-de-cliente.php" id="link-login">Login</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 style="display: none;">HolaViagens</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clientes-cadastrados.php">Buscar Clientes</a></li>
+                <li><a href="cadastro-de-venda.html">Cadastro de Venda</a></li>
+                <li><a href="vendas-cadastradas.php">Buscar Vendas</a></li>
             </ul>
-        </header>
-        <section>
-            <h2 style="display: none;">HolaViagens</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="clientes-cadastrados.php">Buscar Clientes</a></li>
-                    <li><a href="cadastro-de-venda.html">Cadastro de Venda</a></li>
-                    <li><a href="vendas-cadastradas.php">Buscar Vendas</a></li>
-                </ul>
-            </nav>
-            
-            <fieldset>
-                <legend>Cadastro de Vendas</legend>
-                <h3>*Campos Obrigatórios</h3>
-                <form method="post" action="control/control-cadastro-de-venda.php" enctype="multipart/form-data">
+        </nav>
 
-                    <input type="date" class="cadastrar-input-margem" name="dataDataDAVenda" required>
+        <fieldset>
+            <legend>Cadastro de Vendas</legend>
+            <h3>*Campos Obrigatórios</h3>
+            <form method="post" action="control/control-cadastro-de-venda.php" enctype="multipart/form-data">
 
-                    <input type="text" placeholder="* Nome do Vendedor" class="cadastrar-input-margem" name="textNomeDOVendedor" required>
+                <input type="date" class="cadastrar-input-margem" name="dataDataDAVenda" required>
 
-                    <input type="number" placeholder="* Cliente" class="cadastrar-input-margem" name="numberCliente" required>
+                <input type="text" placeholder="* Nome do Vendedor" class="cadastrar-input-margem"
+                    name="textNomeDOVendedor" required>
 
-                    <div class="bt-cadastrar-bt-limpar">
+                <input type="number" placeholder="* Cliente" class="cadastrar-input-margem" name="numberCliente"
+                    required>
 
-                        <input type="submit" value="Cadastrar" class="cadastrar-entrar-bt-margem-tb">
-                        <input type="reset" value="Limpar Campos" class="limpar-deslogar-bt-margem-tb">
+                <div class="bt-cadastrar-bt-limpar">
 
-                    </div>
+                    <input type="submit" value="Cadastrar" class="cadastrar-entrar-bt-margem-tb">
+                    <input type="reset" value="Limpar Campos" class="limpar-deslogar-bt-margem-tb">
 
-                </form>
+                </div>
 
-            </fieldset>
-        </section>
-        <footer>
-            
-        </footer>
-    </body>
+            </form>
+
+        </fieldset>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
 </html>

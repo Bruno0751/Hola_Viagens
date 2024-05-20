@@ -1,26 +1,21 @@
 <?php
-    ob_start();
-    session_start();
+ob_start();
+session_start();
 
-    include '../dao/dao-cliente.php';
+include '../dao/dao-cliente.php';
 
-    $daoCliente = new DAOCliente();
+$daoCliente = new DAOCliente();
 
-    if($daoCliente->verificarFKDAVenda($_GET['id']) == null){
-        
-        $_SESSION['msg'] = "Exclusão não Autorizada";
-        header("location:../load-cadastro-de-cliente.html");
-        ob_end_flush();
-    }else{
+if ($daoCliente->verificarFKDAVenda($_GET['id']) == null) {
 
-        $daoCliente->deletarCliente($_GET['id']);
-        $_SESSION['msg'] = "Cliente Excluido";
-        header("location:../load-cadastro-de-cliente.html");
-        ob_end_flush();
+    $_SESSION['msg'] = "Exclusão não Autorizada";
+    header("location:../load-cadastro-de-cliente.html");
+    ob_end_flush();
+} else {
 
-    }
-    
-    /*
-    VERIFICAR SE EXISTE UMA VENDA CADASTRADA COM O ID DAQUELE CLIENTE
-    */
-    
+    $daoCliente->deletarCliente($_GET['id']);
+    $_SESSION['msg'] = "Cliente Excluido";
+    ob_end_clean();
+    ob_end_flush();
+    header("location:../load-cadastro-de-cliente.html");
+}

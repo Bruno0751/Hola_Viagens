@@ -69,20 +69,20 @@ if (isset($_GET['id'])) {
             <form method="post" action="#">
 
                 <input type="text" class="cadastrar-input-margem" name="textNomeCompleto" value="<?php if (isset($cliente)) {
-                                                                                                        echo $cliente->nome;
-                                                                                                    } ?>">
+                    echo $cliente->nome;
+                } ?>">
 
                 <input type="email" class="cadastrar-input-margem" name="email" value="<?php if (isset($cliente)) {
-                                                                                            echo $cliente->email;
-                                                                                        } ?>">
+                    echo $cliente->email;
+                } ?>">
 
                 <input type="text" class="cadastrar-input-margem" name="textLogin" value="<?php if (isset($cliente)) {
-                                                                                                echo $cliente->lgin;
-                                                                                            } ?>">
+                    echo $cliente->lgin;
+                } ?>">
 
                 <input type="date" class="input-date" name="dateDataNascimento" value="<?php if (isset($cliente)) {
-                                                                                            echo $cliente->data_nascimento;
-                                                                                        } ?>">
+                    echo $cliente->data_nascimento;
+                } ?>">
 
                 <div class="bt-cadastrar-bt-limpar">
                     <li>
@@ -102,7 +102,7 @@ if (isset($_GET['id'])) {
         include_once 'dao/dao-cliente.php';
 
         //include 'util/padronizacao.php';
-
+    
         $cliente = new Cliente();
 
         $cliente->idCliente = $_GET['id'];

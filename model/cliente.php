@@ -9,6 +9,8 @@
     private $img;
     private $data;
     private $imgTemp;
+    private $cpf;
+    private $cnpj;
 
     public function __construct(){}
 
@@ -29,6 +31,8 @@
                     Senha: $this->senha
                     Imagem: $this->img
                     Data: $this->data
+                    CPF: $this->cpf
+                    CNPJ: $this->cnpj
                     IMG: $this->imgTemp");
     }
   }

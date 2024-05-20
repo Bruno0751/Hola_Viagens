@@ -81,7 +81,8 @@ $array = $daoVenda->buscarVenda();
                     <option value="todos">Todos</option>
                 </select>
                 <div>
-                    <input type="submit" value="Procurar" name="filtrar" class="entradas-de-filtro" style="width: 99%;" onClick='informando()'>
+                    <input type="submit" value="Procurar" name="filtrar" class="entradas-de-filtro" style="width: 99%;"
+                        onClick='informando()'>
                 </div>
 
             </form>
@@ -127,14 +128,14 @@ $array = $daoVenda->buscarVenda();
                         echo "<tr>";
                         echo "<td>$linhas->id_venda</td>";
                         echo "<td>$linhas->data_venda</td>";
-                        echo "<td>$linhas->nome_vendedor</td>";
-                        echo "<td>$linhas->cliente</td>";
+                        echo "<td>$linhas->vendedor</td>";
+                        echo "<td>$linhas->id_cliente</td>";
                         echo "<td>$linhas->data_registro</td>";
                         echo "<td>$linhas->hora_registro</td>";
 
                         echo "<td><a href='control/control-excluir-venda.php?id=$linhas->id_venda'>Excluir</a></td>";
                         //echo "<td><a href='alterar-venda.php?id=$linhas->id_venda'>Alterar</a></td>";
-
+                    
                         echo "<td><a href='#' onClick='informando()'>Alterar</a></td>";
                         echo "</tr>";
                     }

@@ -48,19 +48,25 @@
             <h3>*Campos Obrigatórios</h3>
             <form method="post" action="control/control-cadastro-de-cliente.php" enctype="multipart/form-data">
 
-                <input type="text" placeholder="* Nome Completo" class="cadastrar-input-margem" name="textNome">
+                <input type="text" placeholder="* Nome Completo" class="cadastrar-input-margem" name="textNome"
+                    maxlength="30">
 
-                <input type="email" placeholder="* Email" class="cadastrar-input-margem" name="emailEmail">
+                <input type="email" placeholder="Email" class="cadastrar-input-margem" name="emailEmail" maxlength="50">
 
-                <input type="text" placeholder="* Login" class="cadastrar-input-margem" name="textLogin">
+                <input type="text" placeholder="CPF" class="cadastrar-input-margem" name="txtCPF" maxlength="11">
 
-                <input type="password" placeholder="* Senha" class="cadastrar-input-margem" name="passwordSenha">
+                <input type="text" placeholder="CNPJ" class="cadastrar-input-margem" name="txtCNPJ" maxlength="14">
+
+                <input type="text" placeholder="* Login" class="cadastrar-input-margem" name="textLogin" maxlength="30">
+
+                <input type="password" placeholder="* Senha" class="cadastrar-input-margem" name="passwordSenha"
+                    maxlength="30">
 
                 <label>Sua Foto:</label>
                 <input type="file" name="imagem">
 
-                <label>Data de Nascime</label>
-                <input type="date" name="dateDataNascimento" class="input-date" required>
+                <label>Data de Nascime *</label>
+                <input type="date" name="dateDataNascimento" class="input-date">
 
                 <div class="bt-cadastrar-bt-limpar">
 

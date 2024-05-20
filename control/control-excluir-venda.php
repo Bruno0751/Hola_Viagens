@@ -1,15 +1,14 @@
 <?php
-    ob_start();
-    session_start();
+ob_start();
+session_start();
 
-    include '../dao/dao-venda.php';
+include '../dao/dao-venda.php';
 
-    $daoVenda = new DAOVenda();
+$daoVenda = new DAOVenda();
 
-    $daoVenda->deletarVenda($_GET['id']);
+$daoVenda->deletarVenda($_GET['id']);
 
-    $_SESSION['msg'] = "Venda Excluido";
-
-    header("location:../load-cadastro-de-venda.html");
-
-    ob_end_flush();
+$_SESSION['msg'] = "Venda Excluido";
+ob_end_clean();
+ob_end_flush();
+header("location:../load-cadastro-de-venda.html");
